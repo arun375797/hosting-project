@@ -23,7 +23,7 @@ function verifytoken(req,res,next){
 router.use(express.urlencoded({ extended: true }));
 
 // route for sign up
-router.post('/register', verifytoken, async (req, res) => {
+router.post('/register',  async (req, res) => {
     try {
         const studentData = req.body;
         const newStudent = await Student.create(studentData);
